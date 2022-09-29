@@ -1,0 +1,24 @@
+
+VM Installation Guidelines:
+
+https://www.youtube.com/watch?v=x5MhydijWmc
+
+https://github.com/sanathanan/VMWare_Ubuntu_ROS_Installation/blob/main/VMWare_Ubuntu_ROS_Installation/VMWare_Ubuntu_ROS_Installation.pdf
+Install ROS (Robotic operating system)
+
+ROS (https://www.youtube.com/watch?v=ZA7u2XPmnlo)
+https://www.udemy.com/course/ros-basics-program-robots/
+
+ROS and Gazebo Installation Steps
+https://drive.google.com/drive/folders/18wb7z-Md9gWgdyfqxBjNepIXHMx0qabD?usp=sharing
+
+MySQL installation
+
+https://www.youtube.com/watch?v=9-g9JQZsi3c&t=148s
+
+https://www.oracle.com/java/technologies/oracle-java-archive-downloads.html
+https://www.oracle.com/java/technologies/javase/javase8-archive-downloads.html
+
+https://cassandra.apache.org/download/
+https://www.apache.org/dyn/closer.lua/cassandra/3.11.10/apache-cassandra-3.11.10-bin.tar.gz
+

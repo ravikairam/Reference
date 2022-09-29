@@ -1,0 +1,222 @@
+numpy in one notebook:
+https://nbviewer.jupyter.org/github/ageron/handson-ml2/blob/master/tools_numpy.ipynb
+
+To change current directory to E while opening jupyter notebook
+open anaconda prompt and it shows default path then give e: and enter
+
+To Create new env - conda create -n project1 python==3.6.9
+to activate this env  - conda activate project1
+to change the env - codna deactivate 
+to install tensorflow - pip install tensorflow
+to install jupyter notebook - pip install jupyter
+python
+print(tf.__version__)
+
+create a new virtual environment
+
+conda create -n ravi python==3.6.9
+conda activate ravi
+pip install tensorflow==2.3.0
+pip install jupyter
+import tensorflow as tf
+print(tf.__version__)
+python
+
+conda env list
+conda env remove -n ENV_NAME
+
+
+git init
+============
+
+#
+# to generate ssh keyfor public/private rsa keypair
+ssh-keygen -t rsa -b 4096 -C "ravikairam@gmail.com"
+(give enter after 3 line and give same password like 1234)
+eval $(ssh-agent -s)
+ssh-add ~/.ssh/id_rsa
+clip < ~/.ssh/id_rsa.pub
+
+
+
+create a new repository on the command line
+
+echo "# MLGCP1" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/ravikairam/MLGCP1.git
+git push -u origin main
+
+git remote -v
+
+push an existing repository from the command line
+
+git remote add origin https://github.com/ravikairam/MLGCP1.git
+git branch -M main
+git push -u origin main
+
+git status
+==========
+git add .
+===========
+git commit -m "initial commit"
+=============
+git push repo_url master    #Remote
+
+alternate:
+
+git remote add origin remoteurl
+
+git push origin master
+
+Pycharm:
+
+===========
+No python interpreter configured for the project
+
+1.Go to file --> settings --> click on the project --> Python Interpreter -->Gear button --> add python interpreter -->conda environment
+             --> change python version to 3.6 --> click on ok
+2.conda activate env_name
+3.pip install -r requirements.txt # to install all packages at once
+
+
+
+Top 5 Data Science Projects/Ideas For Your Resume For Freshers From My Playlist-
+
+Heroku cloud:
+
+===========
+
+
+
+1.Sign up for Heroku (https://heroku.com)
+
+2.Create a new python file in the same project and name it as app.py
+
+3.Copy the complete code from clientapp.py to app.py
+(client app is development server and we do not use in production environment.)
+4.Move clApp = ClientApp() line to above the function in app.py file
+5. remove host information from app.py
+6. pip install gunicorn
+7. pip freeze > requirements.txt (It adds gunicorn installation to requirements.txt file)
+8. gunicorn app:app
+9. create a Procfile
+   note: File name should not have any extension
+   # add below lines in Procfile
+   web: gunicorn app:app
+7. Go to project directory through cmd
+8. git init (.git folder is created in project directory)
+9. git status
+10.git add -A
+11.git status
+12.git add . (To add changes )
+13.git commit -m "initial commit"
+14.git status
+15.heroku create
+(if heroku is not found install heroku cli nad also make sure you have heroku webpage is opened with your login credentials)
+16.git remote -v
+17.git push heroku master
+18.heroku logs --tail
+
+souran
+AWS Deployment:
+
+===========
+
+1. Go to https://aws.amazon.com/ and click on complete signup
+2.AWS elastic beanstalk
+3. The mail python file named as application.py
+4.Your flask object name, which we have defined in application.py should also be the application
+5.pip install gunicorn
+6.pip freeze > requirements.txt (It adds gunicorn installation to requirements.txt file)
+7.gunicorn application:application ( To run locally)
+8..ebignore is responsible to hold the name of those files which we do not want to push to cloud
+9. create a requirement.txt file.pip freeze > requirements.txt (It adds gunicorn installation to requirements.txt file)
+10.create a folder called .ebextensions
+11. Inside .ebextensions we need to create a python.config file
+12.mention the commands in python.config
+   option_settings:
+     "aws:elasticbeanstalk:container:python":
+       WSGIPath: application:application
+
+After creating application using elasticbeanstalk(useful for only web-application)
+EC2 works for any applications.
+
+a. Creating environment
+b. Launching s3 bucket
+c. Security group is creating
+d. It creates ec2 instance
+e. create auto-scaling operations
+f. create load balancer - Handle resources
+
+
+Deployment on GCP:
+
+app.yaml file is important it contains runtime:python37
+main.py is the file we have to run
+
+1. First we have to go to directory and from there we have to run git commands
+2. Check dir command in displays directory where we have code
+3. git init
+4. git add .
+5. git commit -m "this is my first commit"
+6. git config --global user.email "ravikairam@gmail.com"
+7. git config --global user.name "ravikairam"
+8. git commit -m "this is gcp"
+9. git branch -M main
+10.git remote add origin https://github.com/ravikairam/MLGCP1.git
+11.git push -u origin main
+12.
+
+GCP cloud shell
+
+Login to cloud.google.com
+Go to IAM&Admin --> Manage resources --> create Project
+Install Google clous sdk 
+
+stepi: click on activate cloud shell (top right corner)
+step2: once cloud shell is open click on open in editor
+step3: open in terminal
+step4: ls
+step5: gcloud config set project #project# (git hub project) 
+step6: git clone # git project url#
+step7: Get inside the project which you have cloned
+       cd #project name folder#
+step8: ls ( check all code is available)
+step9: step5: gcloud config set project #project id #
+step6: Select the project on GCP which you want to use for this cloned project       
+step10: gcloud app deploy
+       
+
+Azure:
+
+https://portal.azure.com/#home
+
+create a resource ---> Web app> Create a webapp page will open
+
+create a resource group (Eg:MLLR)
+
+Instance name:give name (Eg:mllrazur)
+Publish:code
+runtime stack:python 3.7
+click on review+create and then create
+then we can see a screen like deployment in process
+then go to resource option then new page opens
+then click on deployment centre
+select local -->authorise --?new page opens -->select on App service build services 
+
+Go to current working directory and press cmd then it goes to desired path
+1 git
+2. git init
+3.git add .
+4.git commit -m "this is my azure check"
+5.git push https://mllrazur.scm.azurewebsites.net:443/mllrazur.git # link came in azure
+6. git push git push --set-upstream https://mllrazur.scm.azurewebsites.net:443/mllrazur.git master
+then it asks for credentials
+Give Deployment Credentials username and password
+then it gives a final url where your app is deployed
+7.url will be created in deployment centre page
+
+

@@ -1,0 +1,289 @@
+                                                  Python
+
+1.String Properties
+
+String is immutable and represented in []
+we cannot assign like s[1] = r
+instaed we can do s.replace("e" = "r")
+s[::1] --> s[start, end, step]
+
+Basic Built-in String methods
+
+s.upper(), s.lower(), s.split(),s.split('w'),s.count('o'),s.center(30,'o')
+s.find('o') --> find index of letter o
+'hello\thi'.expandtabs()
+'hello\thi'.expandtabs()
+
+2.Print Formatting
+
+'Insert another string with curly brackets: {}'.format('The inserted string')
+
+3.Built-in Reg. Expressions
+
+s.split('e') --> ['h', 'llo']
+s.partition('e') --> ('h', 'e', 'llo')
+
+Lists:
+
+Lists are constructed with brackets [] and commas separating every element in the list.Lists are  mutable which means the elements inside a list can be changed!
+
+Use pop to "pop off" an item from the list. By default pop takes off the last index, but you can also specify which index to pop off.
+
+new_list.reverse()
+list.append()
+
+Nesting Lists:
+matrix = [lst_1,lst_2,lst_3] --> lst_1 is 1st row ,lst_2 is 2nd row ,lst_3 is 3rd row
+matrix[0] is 1st row
+
+List Comprehensions:
+# Build a list comprehension by deconstructing a for loop within a []
+first_col = [row[0] for row in matrix]
+
+append: Appends object at end  --> [1, 2, 3, [4, 5]]
+extend: extends list by appending elements from the iterable --> [1, 2, 3, 4, 5]
+
+l.pop(),l.remove(),l.reverse(),l.sort()
+
+Variables in python:
+
+Integers, Float, Boolean, string, Complex(1+2j)
+
+
+Branching (if / elif / else) :
+Python provides the if statement to allow branching based on conditions. Multiple elif checks can also be performed followed by an
+optional else clause. The if statement can be used with any evaluation of truthiness.
+
+Lists:
+
+The first container type that we will look at is the list. A list represents an ordered, mutable collection of objects.
+You can mix and match any type of object in a list, add to it and remove from it at will.
+
+Creating Empty Lists. To create an empty list, you can use empty square brackets or use the list() function
+with no arguments.
+if we use [] it will take as object
+if we use list() then it gives object as iterable
+
+For loop:
+
+The for loop in Python is used to iterate over a sequence (list, tuple, string) or other iterable objects.
+Iterating over a sequence is called traversal.
+
+Loop continues until we reach the last item in the sequence. The body of for loop is separated from the
+rest of the code using indentation
+
+for loop with else:
+
+A for loop can have an optional else block as well. The else part is executed if the items in the sequence used in for loop exhausts.
+
+break statement can be used to stop a for loop. In such case, the else part is ignored.
+
+Hence, a for loop's else part runs if no break occurs
+
+While loop:
+
+The while loop in Python is used to iterate over a block of code as long as the test expression (condition) is true.
+
+We generally use this loop when we don't know beforehand, the number of times to iterate.
+
+In while loop, test expression is checked first. The body of the loop is entered only if the test_expression evaluates
+to True. After one iteration, the test expression is checked again. This process continues until the test_expression evaluates to False.
+
+In Python, the body of the while loop is determined through indentation.
+
+Body starts with indentation and the first unindented line marks the end.
+
+Python interprets any non-zero value as True. None and 0 are interpreted as False.
+
+The range() function:
+
+We can generate a sequence of numbers using range() function. range(10) will generate numbers from 0 to 9 (10 numbers).
+
+We can also define the start, stop and step size as range(start,stop,step size). step size defaults to 1 if not provided.
+
+This function does not store all the values in memory, it would be inefficient. So it remembers the start, stop, step size and generates the next number on the go.
+
+To force this function to output all the items, we can use the function list().
+
+break and continue statement:
+
+break: 
+The break statement terminates the loop containing it. Control of the program flows to the statement immediately
+after the body of the loop.
+
+If break statement is inside a nested loop (loop inside another loop), break will terminate the innermost loop.
+
+continue:
+
+The continue statement is used to skip the rest of the code inside a loop for the current iteration only.
+Loop does not terminate but continues on with the next iteration.
+
+# Program to take the input string from the user.
+
+name = input("What is your name? ")
+type(name)
+
+Plotly and cufflinks:
+
+Plotly is a library that allows you to create interactive plots that you can use in dashboards
+or websites (you can save them as html files or static images).
+
+Installation
+In order for this all to work, you'll need to install plotly and cufflinks to call plots directly off of a pandas dataframe. These libraries are not currently available through conda but are available through pip. Install the libraries at your command line/terminal using:
+
+!pip install plotly
+!pip install cufflinks
+** NOTE: Make sure you only have one installation of Python on your computer when you do this,
+otherwise the installation may not work. **
+
+Tuples :
+In Python, tuples are similar to lists but they are immutable i.e. they cannot be changed.
+You would use the tuples to present data that shouldn't be changed, such as days of week or
+dates on a calendar.Represented in ()
+
+Inheritance:(Family)
+Once a class is defined it models a concept. It is useful to extend a class behavior to model a 
+less general concept. Say we need to model a Student, but we know that every student is also
+a Person so we shouldn't model the Person again but inherit from it instead.
+
+Encapsulation:(Like capsule mixing different compositions) eg: car
+Encapsulation is an another powerful way to extend a class which consists on wrapping an object
+with a second one. There are two main reasons to use encapsulation:
+
+Composition
+Dynamic Extension
+
+Polymorphism and DuckTyping:
+
+Python uses dynamic typing which is also called as duck typing. If an object implements a method 
+you can use it, irrespective of the type. This is different from statically typed languages, 
+where the type of a construct need to be explicitly declared. Polymorphism is the ability to use
+the same syntax for objects of different types:
+
+iPython Writing a File:
+
+StringIO:
+from io import StringIO
+# Use StringIO method to set as file object
+f = StringIO(message
+The StringIO module implements an in-memory filelike object. This object can then be used as input
+or output to most functions that would expect a standard file object.
+
+Sets: set() or {}
+
+Sets are an unordered collection of unique elements which can be constructed using the set()
+function.
+
+Dictionaries:
+
+key:value pair
+
+my_dict = {'key1':'value1','key2':'value2'}
+
+Nesting with Dictionaries:
+
+# Dictionary nested inside a dictionary nested in side a dictionary
+d = {'key1':{'nestkey':{'subnestkey':'value'}}}
+
+Dictionary Comprehensions:
+
+{x:x**2 for x in range(10)}
+
+Functions:
+
+# Functions
+
+## Introduction to Functions
+
+What is a function in Python and how to create a function? 
+
+Functions will be one of our main building blocks when we construct larger and larger amount of code to solve problems.
+
+**So what is a function?**
+
+A function groups a set of statements together to run the statements more than once. It allows us to specify parameters that can serve as inputs to the functions.
+
+Functions allow us to reuse the code instead of writing the code again and again. If you recall strings and lists, remember that len() function is used to find the length of a string.
+Since checking the length of a sequence is a common task, you would want to write a function that 
+can do this repeatedly at command.
+
+Function is one of the most basic levels of reusing code in Python, and it will also allow us 
+to start thinking of program design.
+
+Iterators and Generators:
+
+ It also allows us to generate a sequence of values over time. The main difference in syntax
+ will be the use of a **yield** statement
+
+In this section, you will be learning the differences between iterations and generation in Python
+and also how to construct our own generators with the "yield" statement. Generators allow us to
+generate as we go along instead of storing everything in the memory.
+
+Generators are the best for calculating large sets of results (particularly in calculations 
+that involve loops themselves) when we don't want to allocate memory for all of the results at
+the same time.
+
+return will give results directly and it stores the values in memory location.
+Yiels do not store the values in memory and we have to call one more function to generate the
+results.
+
+map() :
+The map() is a function that takes in two arguments:
+
+A function
+A sequence iterable.ie list
+
+F_temps = list(map(fahrenheit, temp))
+
+Map is more commonly used with lambda expressions since the entire purpose of a map() is to
+save effort on creating manual for loops.
+
+map() can be applied to more than one iterable. The iterables must have the same length.
+
+list(map(lambda x,y:x+y,a,b))
+
+reduce():
+The function reduce(function, sequence) continually applies the function to the sequence. It
+then returns a single value
+
+filter:
+
+The function filter(function, list) offers a convenient way to filter out all the elements of
+an iterable, for which the function returns "True"
+list(filter(lambda x: x%2==0,lst))
+
+Object Oriented Programming:
+
+Object Oriented Programming (OOP) is a programming paradigm that allows abstraction through the
+concept of interacting entities. This programming works contradictory to conventional model and
+is procedural, in which programs are organized as a sequence of commands or statements to perform.
+
+We can think an object as an entity that resides in memory, has a state and it's able to perform
+some actions.
+
+More formally objects are entities that represent instances of a general abstract concept called
+class. In Python, "attributes" are the variables defining an object state and the possible actions
+are called "methods".
+
+In Python, everything is an object also classes and functions
+
+Modules and Packages:
+
+Modules in Python are simply Python files with the .py extension, which implement a set of
+functions. Modules are imported from other modules using the import command. Before you go ahead
+and import modules, check out the full list of built-in modules in the Python Standard library
+
+try and except:
+
+The basic terminology and syntax used to handle errors in Python is the try and except statements. The code which can cause an exception to occur is put in the try block and the handling of the exception are the implemented in the except block of code. The syntax form is:
+
+try:
+   You do your operations here...
+   ...
+except ExceptionI:
+   If there is ExceptionI, then execute this block.
+except ExceptionII:
+   If there is ExceptionII, then execute this block.
+   ...
+else:
+   If there is no exception then execute this block. 

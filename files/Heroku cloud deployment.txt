@@ -1,0 +1,40 @@
+Steps to Deploy into Heroku cloud:
+
+ref:https://dashboard.heroku.com/apps/webscrapper-deploy/deploy/heroku-git
+
+1.Login Heroku with user id and password
+
+(https://id.heroku.com/login)
+
+2.Create an App and give name of App
+
+(New--> Create new app -->give app name --> submit
+
+3.open cmd 
+
+4. Navigate to project directory
+
+C:\Users\User\Desktop\Ineuron Learning\Ineuron Projects\HerokuFlaskDemo-master\firstFlask
+
+5.login to Heroku from CMD 
+
+command to give in project directory in cmd
+
+heroku login (It will open webpage click on login and you will be inside)
+
+6. Create a new git repository
+
+(Initialize a git repository in a new or existing directory)
+
+git init
+
+heroku git:remote -a webscrapper-deploy
+
+7. Deploy your application
+
+(Commit your code to the repository and deploy it to Heroku using Git.)
+
+$ git add .
+$ git commit -am "make it better"
+$ git push heroku master
+

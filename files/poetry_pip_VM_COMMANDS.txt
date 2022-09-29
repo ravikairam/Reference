@@ -1,0 +1,79 @@
+poetry install
+poetry update
+poetry env use C:\Users\DERAKYR\AppData\Local\Programs\Python\Python38\python.exe
+poetry env use 3.8
+poetry env list
+source .\optuna38\.venv\Scripts\activate.bat
+poetry --version
+poetry show -v
+poetry env info
+poetry new pyoptuna38
+poetry env remove tsc-optuna-9gxPs48u-py3.9
+poetrz add
+poetry shell
+poetry init
+
+
+source  _bashrc.sh
+source ../_bashrc.sh  
+
+#create virtual env #create env
+python -m venv project_test
+dir
+project_test\Scripts\activate.bat #activate env
+where python
+pip list
+pip freeze
+deactivate
+rmdir project_test \s
+
+other way
+
+mkdir project_test
+python -m venv project_test\venv
+project_test\venv\Scripts\activate.bat
+pip install -r requirements.txt
+pip list
+python -m venv venv --system-site-packages # environment takes globa installed packages
+
+pip install -r requirements. txt 
+pip freeze > requirements.txt
+
+#### Guide to create pip packages
+
+https://dev.to/charlesw001/plugin-architecture-in-python-jla
+
+
+
+cd ..\optunatsc\
+
+python setup.py install
+pip install optunatsc
+pip3 install optunatsc==0.0.1
+
+pip uninstall -y optunatsc
+pip freeze | grep optuna
+
+pip install   -e . -vvv | findstr adding
+pip install  . .vvv | findstr adding
+
+
+pip install .\dist\optunatsc-0.0.1-py3-none-any.whl
+
+##should run after we make anz changes to setup.py
+pip uninstall -y optunatsc
+py setup.py bdist_wheel
+pip install .\dist\optunatsc-0.0.1-py3-none-any.whl
+pip show optunatsc
+pip show -f optunatsc
+
+
+   
+ 
+ https://www.oreilly.com/library/view/data-science-on/9781492079385/ch10.html
+https://www.oreilly.com/library/view/introducing-mlops/9781492083283/
+
+
+
+
+

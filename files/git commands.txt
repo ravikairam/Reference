@@ -72,6 +72,26 @@ goto folder >
    git commit -m "comment"
    git push
    
+git@ssh.dev.azure.com's password: windows
+
+Getting access to downlad repo from Azure devops git
+
+1. create a folder .ssh in root dir (C:\Users\DERAKYR)
+2. open windowspoershell in the root directory
+ ssh-keygen -o -t rsa -C "ravi.kyram@de.abb-com"
+and give enter many times till key is Generated
+3. then some files created in .ssh folder
+4. open id_rsa.pub in notepad and copy the key.
+5. Open the git profile and go to settings:ssh public keys
+6. add new key and give key name and paste key in public key data
+7.click on the git repo url -> a page opens here -> top right corner  you see, clone option > click on that -> select SSH -> copy the url.
+
+create a folder in your local > 
+goto folder >
+ right click, git bash >
+ Enter command.,  git clone  paste the git repo url link
+ Then a repo in ur local is created..
+   
 
 label = [0,0,0,1,1,2,2,3,3,4,5,5,5,5]
 max(label,key=label.count)
